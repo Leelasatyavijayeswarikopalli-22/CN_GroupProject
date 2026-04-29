@@ -5,10 +5,13 @@ public class ExpressionConverter {
     private static int precedence(char c) {
         switch (c) {
             case '+':
-            case '-': return 1;
+            case '-':
+                return 1;
             case '*':
-            case '/': return 2;
-            case '^': return 3;
+            case '/':
+                return 2;
+            case '^':
+                return 3;
         }
         return -1;
     }
@@ -131,13 +134,20 @@ public class ExpressionConverter {
     // MAIN PROCESSOR
     public static String process(String type, String expr) {
         switch (type) {
-            case "infix_to_postfix": return infixToPostfix(expr);
-            case "infix_to_prefix": return infixToPrefix(expr);
-            case "postfix_to_infix": return postfixToInfix(expr);
-            case "prefix_to_infix": return prefixToInfix(expr);
-            case "postfix_to_prefix": return postfixToPrefix(expr);
-            case "prefix_to_postfix": return prefixToPostfix(expr);
-            default: return "Invalid Type";
+            case "infix_to_postfix":
+                return infixToPostfix(expr);
+            case "infix_to_prefix":
+                return infixToPrefix(expr);
+            case "postfix_to_infix":
+                return postfixToInfix(expr);
+            case "prefix_to_infix":
+                return prefixToInfix(expr);
+            case "postfix_to_prefix":
+                return postfixToPrefix(expr);
+            case "prefix_to_postfix":
+                return prefixToPostfix(expr);
+            default:
+                return "Invalid Type";
         }
     }
 }

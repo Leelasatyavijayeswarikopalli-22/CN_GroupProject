@@ -4,7 +4,7 @@ import java.net.*;
 public class Server {
     public static void main(String[] args) {
         try {
-            ServerSocket serverSocket = new ServerSocket(5002);
+            ServerSocket serverSocket = new ServerSocket(5003);
             System.out.println("Server started...");
 
             while (true) {
